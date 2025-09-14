@@ -19,7 +19,7 @@ const CoursesSection = () => {
                                 to={`/courses/${course.slug}`}
                                 className="group bg-slate-900 rounded-2xl shadow-lg overflow-hidden block h-full flex flex-col transform hover:-translate-y-2 transition-all border border-white/10"
                             >
-                                <div className="relative h-56">
+                                <div className="relative h-56 overflow-hidden">
                                     <img src={course.details.coverImage} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                                 </div>

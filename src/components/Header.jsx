@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline"
-
+import logo from "./images/bytesourcelogo.png"
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
@@ -19,7 +19,7 @@ const Header = () => {
         { name: "About", path: "/about" },
         { name: "Courses", path: "/courses" },
         { name: "Projects", path: "/projects" },
-        { name: "Gallery", path: "/gallery" },
+        // { name: "Gallery", path: "/gallery" },
         { name: "Contact", path: "/contact" },
     ]
 
@@ -34,8 +34,14 @@ const Header = () => {
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         <NavLink to="/" className="flex-shrink-0">
-                            <img src="/bytesource-logo.svg" alt="ByteSource" className="h-10 w-auto" />
+                            <img
+                                src={logo}
+                                alt="ByteSource"
+                                className="h-16 w-auto sm:h-20 md:h-24 lg:h-28 object-contain"
+                            />
                         </NavLink>
+
+
 
                         <nav className="hidden md:flex items-center space-x-8">
                             {navItems.map((item) => (

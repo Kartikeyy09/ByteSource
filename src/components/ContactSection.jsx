@@ -1,77 +1,44 @@
 "use client"
 
-import { useState } from "react"
 import {
-    UserIcon,
-    EnvelopeIcon,
-    PhoneIcon,
-    ChatBubbleBottomCenterTextIcon,
     MapPinIcon,
+    PhoneIcon,
+    EnvelopeIcon,
     ClockIcon
 } from "@heroicons/react/24/outline"
 
 const ContactSection = () => {
-    const [submitted, setSubmitted] = useState(false)
-    const [formData, setFormData] = useState({ name: "", email: "", phone: "", requirement: "" })
-
-    const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value })
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log("Form submitted:", formData)
-        setSubmitted(true)
-    }
-
     return (
         <section id="contact" className="py-16 bg-slate-950">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Let’s Talk</h2>
                     <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
-                        Questions about courses, scholarships, or career support? We’re here to help.
+                        Questions about courses or career support? We’re here to help.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <div className="bg-slate-900 p-8 sm:p-10 rounded-2xl shadow-lg border border-white/10">
-                        {!submitted ? (
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <h3 className="text-2xl font-bold text-white mb-1">Send us a message</h3>
-                                <p className="text-slate-400 mb-6">We usually reply within 2 business hours.</p>
-
-                                <div className="relative">
-                                    <UserIcon className="w-5 h-5 text-slate-400 absolute top-3.5 left-4" />
-                                    <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" required className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 pl-11 focus:ring-2 focus:ring-fuchsia-500 outline-none text-slate-100" />
-                                </div>
-                                <div className="relative">
-                                    <EnvelopeIcon className="w-5 h-5 text-slate-400 absolute top-3.5 left-4" />
-                                    <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 pl-11 focus:ring-2 focus:ring-fuchsia-500 outline-none text-slate-100" />
-                                </div>
-                                <div className="relative">
-                                    <PhoneIcon className="w-5 h-5 text-slate-400 absolute top-3.5 left-4" />
-                                    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 pl-11 focus:ring-2 focus:ring-fuchsia-500 outline-none text-slate-100" />
-                                </div>
-                                <div className="relative">
-                                    <ChatBubbleBottomCenterTextIcon className="w-5 h-5 text-slate-400 absolute top-3.5 left-4" />
-                                    <textarea name="requirement" value={formData.requirement} onChange={handleChange} placeholder="How can we help?" rows="4" required className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 pl-11 focus:ring-2 focus:ring-fuchsia-500 outline-none text-slate-100"></textarea>
-                                </div>
-
-                                <button type="submit" className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white py-3.5 rounded-lg font-semibold text-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-lg">
-                                    Send Message
-                                </button>
-                            </form>
-                        ) : (
-                            <div className="text-center flex flex-col items-center justify-center min-h-[400px]">
-                                <div className="w-24 h-24 bg-green-900/40 rounded-full flex items-center justify-center mb-6 text-green-400">
-                                    <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                                </div>
-                                <h2 className="text-3xl font-bold text-white mb-3">Thanks!</h2>
-                                <p className="text-slate-300 max-w-sm">
-                                    Your message is in. We’ll reach out shortly.
-                                </p>
-                            </div>
-                        )}
+                    {/* LEFT SIDE - GOOGLE FORM BUTTON */}
+                    <div className="bg-slate-900 p-8 sm:p-10 rounded-2xl shadow-lg border border-white/10 flex flex-col items-center justify-center">
+                        <h3 className="text-2xl font-bold text-white mb-2">Get in Touch</h3>
+                        <p className="text-slate-400 text-center mb-8 max-w-sm">
+                            Fill out our quick contact form — we’ll get back to you within 2 business hours.
+                        </p>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScdKwgHmI_aCIAUlhJ6Snl51PPfzyQZIxLAKlVOY8HqWYsKsQ/viewform?usp=dialog"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-xs bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shadow-lg text-center focus:ring-2 focus:ring-fuchsia-500 focus:outline-none"
+                        >
+                            Open Contact Form
+                        </a>
+                        <p className="text-slate-500 text-sm mt-4">
+                            Opens in new tab →
+                        </p>
                     </div>
 
+                    {/* RIGHT SIDE - CONTACT INFO (UNCHANGED) */}
                     <div className="space-y-8">
                         <h3 className="text-2xl font-bold text-white">Contact Information</h3>
                         <div className="space-y-6">
@@ -81,7 +48,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="ml-4">
                                     <h4 className="font-semibold text-white">Our Office</h4>
-                                    <p className="text-slate-300">10th Floor, Tech Park, Indiranagar<br />Bengaluru, KA 560038</p>
+                                    <p className="text-slate-300">Ayodhya Bypass, Bhopal <br />Madhya Pradesh 462022</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
@@ -90,7 +57,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="ml-4">
                                     <h4 className="font-semibold text-white">Phone</h4>
-                                    <a href="tel:+919876543210" className="text-slate-300 hover:text-fuchsia-400 transition-colors">+91 98765 43210</a>
+                                    <a href="tel:+919876543210" className="text-slate-300 hover:text-fuchsia-400 transition-colors">+91 9131718611</a>
                                 </div>
                             </div>
                             <div className="flex items-start">
@@ -99,7 +66,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="ml-4">
                                     <h4 className="font-semibold text-white">Email</h4>
-                                    <a href="mailto:hello@bytesource.in" className="text-slate-300 hover:text-fuchsia-400 transition-colors">hello@bytesource.in</a>
+                                    <a href="mailto:bytesourceacademy@gmail.com" className="text-slate-300 hover:text-fuchsia-400 transition-colors"> bytesourceacademy@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -118,11 +85,12 @@ const ContactSection = () => {
                     </div>
                 </div>
 
+                {/* MAP - UNCHANGED */}
                 <div className="mt-20">
                     <h3 className="text-2xl font-bold text-white text-center mb-8">Visit Us</h3>
                     <div className="rounded-xl overflow-hidden shadow-lg border border-white/10">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.013663535936!2d77.64079267526963!3d12.969781887356539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1409a4b9d7d9%3A0x9b0ebc8f1bcac569!2sIndiranagar!5e0!3m2!1sen!2sin!4v1691500000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58642.177218215205!2d77.42561198749488!3d23.27450477323185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c69f68f21f151%3A0x6cd74914e0f50350!2sAyodhya%20Bypass%2C%20Bhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1757865176375!5m2!1sen!2sin"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}

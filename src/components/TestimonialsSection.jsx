@@ -17,41 +17,42 @@ const TestimonialsSection = () => {
     const testimonials = [
         {
             name: "Aarav Gupta",
-            position: "SDE I",
+            position: "Software Engineer",
             company: "Flipkart",
-            content: "The MERN bootcamp was intense and practical. My final project became the centerpiece of my portfolio and helped me crack interviews.",
+            content: "The MERN bootcamp was intense and practical. My final project became the centerpiece of my portfolio and helped me crack interviews at startups.",
             rating: 5,
             accent: "fuchsia",
-            image: "https://randomuser.me/api/portraits/men/32.jpg",
+            image: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=1600&auto=format&fit=crop", // using image similar to turn0image2
         },
         {
             name: "Priya Sharma",
             position: "Android Developer",
             company: "Zomato",
-            content: "Mentors are amazing. Code reviews and weekly mock interviews made a huge difference in my confidence.",
+            content: "Mentors are amazing. The weekly mock interviews and code reviews gave me the practical exposure I was missing.",
             rating: 5,
             accent: "indigo",
-            image: "https://randomuser.me/api/portraits/women/44.jpg",
+            image: "https://images.unsplash.com/photo-1581276879432-15a19d654956?q=80&w=1600&auto=format&fit=crop", // similar to turn0image10
         },
         {
             name: "Rohan Patel",
             position: "ML Engineer",
             company: "Tata Elxsi",
-            content: "Loved the Python + AI track. We built end-to-end ML projects and learned MLOps basics too.",
+            content: "Loved the Python + AI track. We built end-to-end ML projects, got hands-on with deployment, and learned the latest frameworks.",
             rating: 5,
             accent: "cyan",
-            image: "https://randomuser.me/api/portraits/men/65.jpg",
+            image: "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=1600&auto=format&fit=crop", // placeholder, pick similar Indian-dev portrait
         },
         {
             name: "Sneha Reddy",
-            position: "Full-Stack Dev",
+            position: "Full-Stack Developer",
             company: "Freshworks",
-            content: "Structured curriculum, great peer group, and solid placement support. Highly recommend!",
+            content: "Structured curriculum, an excellent peer group, and solid placement support. Makes all the difference in this field!",
             rating: 5,
             accent: "amber",
-            image: "https://randomuser.me/api/portraits/women/68.jpg",
+            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1600&auto=format&fit=crop", // placeholder
         },
-    ]
+    ];
+
 
     const scroll = (direction) => {
         if (!scrollRef.current) return

@@ -14,7 +14,7 @@ const WhyChooseSection = () => {
         { title: "Project-First Curriculum", description: "Every module ends with a deployable project. You graduate with a strong portfolio.", icon: SparklesIcon },
         { title: "Career Services", description: "Mock interviews, resume help, referrals, and job assistance until you land an offer.", icon: TrophyIcon },
         { title: "PAN India + Remote", description: "Join in-person in major cities or learn live online from anywhere.", icon: GlobeAltIcon },
-        { title: "Scholarships & EMI", description: "Accessible tuition with scholarships and flexible payment plans.", icon: TagIcon },
+        { title: "EMI", description: "Accessible tuition with flexible payment plans.", icon: TagIcon },
         { title: "Structured Roadmaps", description: "Clear step-by-step tracks for Web, DSA, Android, Flutter, AI/ML, and DevOps.", icon: ClipboardDocumentCheckIcon },
     ]
 
@@ -47,7 +47,7 @@ const WhyChooseSection = () => {
                     })}
                 </div>
 
-                <div className="mt-24 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white p-12 rounded-3xl text-center shadow-xl">
+                {/* <div className="mt-24 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white p-12 rounded-3xl text-center shadow-xl">
                     <h3 className="text-3xl md:text-4xl font-bold mb-4">Ready to begin?</h3>
                     <p className="text-lg md:text-xl mb-8 opacity-90">Talk to a mentor and get your roadmap.</p>
                     <button
@@ -56,7 +56,7 @@ const WhyChooseSection = () => {
                     >
                         Book Free Counseling
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     )

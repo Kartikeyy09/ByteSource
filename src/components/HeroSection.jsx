@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Lottie from "lottie-react"
 import codingAnimation from "../data/codingAnimation.json"
+import Animation from "../data/stLDe6bIyN.json"
 
 const HeroSection = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -59,7 +60,7 @@ const HeroSection = () => {
                     <div className="relative hidden lg:block">
                         <div className="absolute inset-0 transition-transform duration-500 ease-out" style={parallax(40)}>
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] opacity-90">
-                                <Lottie animationData={codingAnimation} loop />
+                                <Lottie animationData={Animation} loop />
                             </div>
                             <div className="absolute top-20 right-10 w-4 h-4 bg-fuchsia-400/50 rounded-full" />
                             <div className="absolute bottom-20 left-10 w-3 h-3 bg-violet-400/50 rounded-full" />

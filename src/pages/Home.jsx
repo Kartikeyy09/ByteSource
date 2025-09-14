@@ -81,7 +81,7 @@ const Home = () => {
 
             <TestimonialsSection />
 
-            <motion.section className="py-24 text-center" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={sectionVariants}>
+            {/* <motion.section className="py-24 text-center" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={sectionVariants}>
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white">Ready to begin?</h2>
                     <p className="mt-4 text-lg text-slate-300">Book a free counseling session and get your personalized roadmap.</p>
@@ -91,7 +91,7 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-            </motion.section>
+            </motion.section> */}
         </div>
     )
 }
